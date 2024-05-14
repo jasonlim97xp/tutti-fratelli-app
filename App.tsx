@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import AppNav from './src/navigation/AppNav';
+import codePush from 'react-native-code-push';
 
 function App() {
+  useEffect(() => {
+    codePush.sync();
+  }, []);
+
   return <AppNav />;
 }
 
-export default App;
+export default codePush({
+  checkFrequency: codePush.CheckFrequency.ON_APP_START,
+})(App);
 
 // REACT NATIVE
 // https://reactnative.dev/docs/environment-setup?guide=native
