@@ -14,29 +14,62 @@ import Carousel, {ParallaxImage} from 'react-native-snap-carousel';
 const ENTRIES1 = [
   {
     id: 1,
+    title: 'Tutti 25 Information',
+    page: 'Info',
+    illustration: 'https://i.imgur.com/UPrs1EWl.jpg',
+  },
+  {
+    id: 2,
     title: 'Welcome to the best camp in the world!',
+    page: 'History',
+    illustration:
+      'https://scontent.fkul2-2.fna.fbcdn.net/v/t1.6435-9/38026314_1938032023161698_1872911594267082752_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KDQeca1dtrQQ7kNvgEEXcC1&_nc_ht=scontent.fkul2-2.fna&oh=00_AfADOUBH3rmHhCCa19IMGoUiD7txS6KzNUmEyNezRKBtjA&oe=6659A8E8',
+  },
+  {
+    id: 3,
+    title: 'Peta Perkhemahan',
+    page: 'Map',
+    illustration: 'https://i.imgur.com/MABUbpDl.jpg',
+  },
+  {
+    id: 4,
+    title: 'Safety Guideline',
+    page: 'Safety',
+    illustration: 'https://i.imgur.com/MABUbpDl.jpg',
+  },
+];
+
+const ENTRIES2 = [
+  {
+    id: 1,
+    title: 'Struktur Skuad',
+    page: 'TeamStructure',
     illustration:
       'https://scontent.fkul2-2.fna.fbcdn.net/v/t1.6435-9/38026314_1938032023161698_1872911594267082752_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KDQeca1dtrQQ7kNvgEEXcC1&_nc_ht=scontent.fkul2-2.fna&oh=00_AfADOUBH3rmHhCCa19IMGoUiD7txS6KzNUmEyNezRKBtjA&oe=6659A8E8',
   },
   {
     id: 2,
-    title: 'Earlier this morning, NYC',
+    title: 'Taklimat 2 Preparation',
+    page: 'TeamStructure',
     illustration: 'https://i.imgur.com/UPrs1EWl.jpg',
   },
   {
     id: 3,
-    title: 'White Pocket Sunset',
-    illustration: 'https://i.imgur.com/MABUbpDl.jpg',
+    title: 'Rider Tutti',
+    page: 'RiderTutti',
+    illustration: 'https://i.imgur.com/UPrs1EWl.jpg',
   },
   {
     id: 4,
-    title: 'Acrocorinth, Greece',
-    illustration: 'https://i.imgur.com/KZsmUi2l.jpg',
+    title: 'Lagu Tema',
+    page: 'LaguTema',
+    illustration: 'https://i.imgur.com/UPrs1EWl.jpg',
   },
   {
     id: 5,
-    title: 'The lone tree, majestic landscape of New Zealand',
-    illustration: 'https://i.imgur.com/2nCt3Sbl.jpg',
+    title: 'Awards',
+    page: 'Awards',
+    illustration: 'https://i.imgur.com/UPrs1EWl.jpg',
   },
 ];
 
@@ -50,9 +83,29 @@ const Home = ({navigation}) => {
     setEntries(ENTRIES1);
   }, []);
 
+  const selectPage = lineNo => {
+    switch (lineNo) {
+      case 1:
+        return ENTRIES1;
+      case 2:
+        return ENTRIES2;
+
+      default:
+        return;
+    }
+  };
+
+  const navigateToPages = (id, lineNo) => {
+    let pageEntry = selectPage(lineNo);
+
+    console.log('Page', pageEntry);
+    let page = selectPage(lineNo)?.find(item => item.id === id);
+    navigation.navigate(page.page);
+  };
+
   const renderLine1Item = ({item, index}, parallaxProps) => {
     return (
-      <TouchableOpacity onPress={() => console.log(`hello ${item.id}`)}>
+      <TouchableOpacity onPress={() => navigateToPages(item.id, 1)}>
         <View style={styles.item}>
           <ParallaxImage
             source={{uri: item.illustration}}
@@ -73,15 +126,17 @@ const Home = ({navigation}) => {
 
   const renderMoreItem = ({item, index}) => {
     return (
-      <View style={styles.multipleContainer}>
-        <View style={styles.multipleImageContainer}>
-          <Image
-            source={{uri: item.illustration}}
-            style={styles.multipleImage}
-          />
+      <TouchableOpacity onPress={() => navigateToPages(item.id, 2)}>
+        <View style={styles.multipleContainer}>
+          <View style={styles.multipleImageContainer}>
+            <Image
+              source={{uri: item.illustration}}
+              style={styles.multipleImage}
+            />
+          </View>
+          <Text style={styles.imageTitle}>{item.title}</Text>
         </View>
-        <Text style={styles.imageTitle}>{item.title}</Text>
-      </View>
+      </TouchableOpacity>
     );
   };
 
@@ -108,7 +163,7 @@ const Home = ({navigation}) => {
             sliderWidth={screenWidth}
             sliderHeight={screenWidth}
             itemWidth={screenWidth - 60}
-            data={entries}
+            data={ENTRIES1}
             renderItem={renderLine1Item}
             hasParallaxImages={true}
           />
@@ -122,7 +177,7 @@ const Home = ({navigation}) => {
         <Carousel
           sliderWidth={screenWidth}
           itemWidth={200}
-          data={entries}
+          data={ENTRIES2}
           renderItem={renderMoreItem}
           firstItem={0}
           loop={true}
@@ -136,7 +191,7 @@ const Home = ({navigation}) => {
         <Carousel
           sliderWidth={screenWidth}
           itemWidth={200}
-          data={entries}
+          data={ENTRIES2}
           renderItem={renderMoreItem}
           firstItem={0}
           loop={true}
@@ -180,6 +235,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
     padding: 10,
+    textAlign: 'center',
   },
   multipleContainer: {
     borderRadius: 20,
