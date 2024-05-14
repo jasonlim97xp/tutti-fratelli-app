@@ -2,65 +2,35 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, ScrollView, Platform} from 'react-native';
 import {Div, Text, Image} from 'react-native-magnus';
 
-const TuttiInfo = [
-  {
-    id: 1,
-    info: 'Date: ',
-    detail: '1, 2, 3, 4 June 2024 (Saturday - Tuesday)',
-  },
-  {
-    id: 2,
-    info: 'Taklimat 1: ',
-    detail: '18 May 2024 (Saturday)',
-  },
-  {
-    id: 3,
-    info: 'Taklimat 2: ',
-    detail: '25 May 2024 (Saturday)',
-  },
-  {
-    id: 4,
-    info: 'Venue: ',
-    detail: 'Hutan Lipur Sungai Tua (HUTLISTA 2), Gombak, Selangor',
-  },
-  {
-    id: 5,
-    info: 'Yuran: ',
-    detail: 'RM 100',
-  },
-  {
-    id: 6,
-    info: 'Tema: ',
-    detail: 'Tutti Fratelli: 25 Years of Humanity, Unity & Togetherness',
-  },
-  {
-    id: 7,
-    info: 'Konsep: ',
-    detail: 'Sekolah vs Sekolah',
-  },
-  {
-    id: 8,
-    info: 'Lagu Tema: ',
-    detail: 'Hulurkan Tanganmu',
-  },
-  {
-    id: 9,
-    info: 'Laungan Tutti: ',
-    detail: "Rider's Tutti",
-  },
-  {
-    id: 10,
-    info: 'Nama Kumpulan: ',
-    detail: 'Phonetic + Nama Sekolah + Maskot Perkampungan',
-  },
-  {
-    id: 11,
-    info: 'Daerah : ',
-    detail: 'Klang, Gombak, Hulu Langat, Petaling Jaya',
-  },
-];
+const IkrarBSMM = ({navigation}) => {
+  const ikrar = [
+    'Bahawa kami, ahli Persatuan Bulan Sabit Merah Malaysia',
+    'berikrar akan taat setia kepada',
+    'Duli Yang Maha Mulia Sri Paduka Baginda',
+    'Yang Di-Pertuan Agong',
+    'serta pemerintah-pemerintah di negari kami',
+    'berdasarkan kepada prinsip-prinsip rukun negara',
+    '',
+    'Bahawa kami berikrar',
+    'akan sentiasa patuh pada perlembagaan',
+    'dan undang-undang serta arahan persatuan',
+    'walau di mana kami berada.',
+    '',
+    'Bahawa kami berikrar',
+    'akan sentiasa memberi khidmat sukarela',
+    'kepada yang sakit dan menderita',
+    'di waktu aman atau bencana',
+    'berdasarkan prinsip Bulan Sabit Merah seperti berikut:',
+    '',
+    'Kemanusiaan',
+    'Kesaksamaan',
+    'Keberkecualian',
+    'Kebebasan',
+    'Khidmat Sukarela',
+    'Bersatu',
+    'Kesejagatan',
+  ];
 
-const Info = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScrollView style={styles.scrollViewContainer}>
@@ -74,18 +44,16 @@ const Info = ({navigation}) => {
           />
 
           <Text fontSize="2xl" style={styles.title}>
-            TUTTI 25 INFORMATION
+            Ikrar Bulan Sabit Merah Malaysia
           </Text>
         </Div>
 
         <Div style={{height: 20}} />
 
         <Div style={styles.contentContainer}>
-          {TuttiInfo.map(info => (
-            <Text style={styles.contentText} key={info.id}>
-              {info.info}
-              {'\n'}
-              {info.detail}
+          {ikrar.map((text, index) => (
+            <Text key={index} fontSize="2xl" style={styles.contentText}>
+              {text}
             </Text>
           ))}
         </Div>
@@ -125,13 +93,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
   },
-  contentHeader: {
-    color: '#fefefe',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  contentText: {color: '#fefefe', marginBottom: 20},
+  contentText: {color: '#fefefe'},
 });
 
-export default Info;
+export default IkrarBSMM;

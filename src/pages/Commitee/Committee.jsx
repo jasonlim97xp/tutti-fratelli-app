@@ -13,12 +13,12 @@ const AJK = [
   {
     id: 1,
     name: 'Shreenath C A/L Venukopalan',
-    picture: '',
+    picture: '1.png',
   },
   {
     id: 2,
     name: 'Agilan Munusamy',
-    picture: '',
+    picture: '2.png',
   },
   {
     id: 3,
@@ -33,6 +33,191 @@ const AJK = [
   {
     id: 5,
     name: 'Jason Lim Zhen Shen',
+    picture: '',
+  },
+  {
+    id: 6,
+    name: 'Soe Min Ming',
+    picture: '',
+  },
+  {
+    id: 7,
+    name: 'Syamir Alihan Bin Showkat Ali',
+    picture: '',
+  },
+  {
+    id: 8,
+    name: 'Firdaus Anwar Bin Mustafa',
+    picture: '',
+  },
+  {
+    id: 9,
+    name: 'Dinesgumar A/L Nagaiah',
+    picture: '',
+  },
+  {
+    id: 10,
+    name: 'Ehswarakali Sadasivam',
+    picture: '',
+  },
+  {
+    id: 11,
+    name: 'Tharenasre A/P Balaguru',
+    picture: '',
+  },
+  {
+    id: 12,
+    name: 'Jocelyn Lim Gek Shin',
+    picture: '',
+  },
+
+  {
+    id: 13,
+    name: 'Na Yong Teck',
+    picture: '',
+  },
+  {
+    id: 14,
+    name: 'Kuralmathy A/P Selvam',
+    picture: '',
+  },
+  {
+    id: 15,
+    name: 'Ku Yee Fang',
+    picture: '',
+  },
+  {
+    id: 16,
+    name: 'Soh Hui Ying',
+    picture: '',
+  },
+  {
+    id: 17,
+    name: 'Low Hui Hui',
+    picture: '',
+  },
+  {
+    id: 18,
+    name: 'Roshini Vellu',
+    picture: '',
+  },
+
+  {
+    id: 19,
+    name: 'Muhamad Adib bin Azahar',
+    picture: '',
+  },
+  {
+    id: 20,
+    name: 'Rudrayani A/P Thiruchelvam',
+    picture: '',
+  },
+  {
+    id: 21,
+    name: 'Shyamalan A/L Somasuntharam',
+    picture: '',
+  },
+  {
+    id: 22,
+    name: 'Suriya Kumaren A/L Anantha Kumaran',
+    picture: '',
+  },
+  {
+    id: 23,
+    name: 'Kaartiga A/P Ravinran',
+    picture: '',
+  },
+  {
+    id: 24,
+    name: 'Ang Yik Ching',
+    picture: '',
+  },
+  {
+    id: 25,
+    name: 'Mohd Fadil Bin Ismail',
+    picture: '',
+  },
+  {
+    id: 26,
+    name: 'Yap Chun Wey',
+    picture: '',
+  },
+  {
+    id: 27,
+    name: 'Fabian Fernandez',
+    picture: '',
+  },
+
+  {
+    id: 28,
+    name: 'Manoj Kumar A/L Loganathan',
+    picture: '',
+  },
+  {
+    id: 29,
+    name: 'Yuvaneswaran A/L Chandramohan',
+    picture: '',
+  },
+  {
+    id: 30,
+    name: 'Niranjanan A/L Seevernesveran',
+    picture: '',
+  },
+  {
+    id: 31,
+    name: 'Arumugam A/L Ragaseagran',
+    picture: '',
+  },
+  {
+    id: 32,
+    name: 'Yeeswaran A/L Murugan',
+    picture: '',
+  },
+
+  {
+    id: 33,
+    name: 'Durga Devi Ravindran',
+    picture: '',
+  },
+  {
+    id: 34,
+    name: 'Yasshini Priya A/P Manimaran',
+    picture: '',
+  },
+  {
+    id: 35,
+    name: 'Ronalson A/L Arphutarajan',
+    picture: '',
+  },
+  {
+    id: 36,
+    name: 'Shalvin A/L Kanvinchelvan',
+    picture: '',
+  },
+  {
+    id: 37,
+    name: 'Aida Batrisya Binti Azli',
+    picture: '',
+  },
+  {
+    id: 38,
+    name: 'Nur Fatihah Binti Ishak',
+    picture: '',
+  },
+
+  {
+    id: 39,
+    name: 'Sri Zuraidah Binti Abdul Khaliq',
+    picture: '',
+  },
+  {
+    id: 40,
+    name: 'Yeap Jia Wei',
+    picture: '',
+  },
+  {
+    id: 41,
+    name: 'Muhammad Haziq Faris Bin Mohd Hafidzuddin',
     picture: '',
   },
 ];
@@ -51,7 +236,22 @@ const Role = [
   {
     id: 3,
     title: 'Setiausaha',
-    ajk: [3, 4, 5, 6, 7, 2, 9, 10, 11, 12],
+    ajk: [3, 4, 5, 6, 7, 8, 2, 9, 10, 11],
+  },
+  {
+    id: 4,
+    title: 'Bendahari',
+    ajk: [12, 13, 14, 15, 16, 17],
+  },
+  {
+    id: 5,
+    title: 'Corporate Communication',
+    ajk: [18, 19, 20, 21, 22, 23, 24, 25, 26, 2, 13, 17],
+  },
+  {
+    id: 6,
+    title: 'Kem Komandan',
+    ajk: [25, 27, 5, 8, 20, 22],
   },
 ];
 

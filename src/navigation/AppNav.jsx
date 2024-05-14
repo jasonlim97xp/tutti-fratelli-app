@@ -19,6 +19,12 @@ import Safety from '../pages/Home/Content/Safety';
 import RiderTutti from '../pages/Home/Content/Rider';
 import Awards from '../pages/Home/Content/Awards';
 import LaguTema from '../pages/Home/Content/LaguTema';
+import Kuartermaster from '../pages/Home/Content/Roles/Kuartermaster';
+import LaguBSMM from '../pages/Home/Content/Lagu';
+import IkrarBSMM from '../pages/Home/Content/Ikrar';
+import FirstAidSkill from '../pages/Home/Content/FirstAidSkill';
+import ThingsToBring from '../pages/Home/Content/ThingsToBring';
+import KKK from '../pages/Home/Content/Roles/KKK';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -42,11 +48,47 @@ const HomeStack = () => {
       <Stack.Screen name="Map" component={Map} />
       <Stack.Screen name="Safety" component={Safety} />
       {/* Line 2 */}
-      <Stack.Screen name="TeamStructure" component={TeamStructure} />
+      <Stack.Screen
+        name="TeamStructure"
+        component={TeamStructure}
+        options={{headerTitle: 'Struktur Skuad'}}
+      />
       {/* Taklimat 2 Preparation */}
-      <Stack.Screen name="RiderTutti" component={RiderTutti} />
+      <Stack.Screen
+        name="RiderTutti"
+        component={RiderTutti}
+        options={{headerTitle: 'Rider Tutti'}}
+      />
       <Stack.Screen name="Awards" component={Awards} />
-      <Stack.Screen name="LaguTema" component={LaguTema} />
+      <Stack.Screen
+        name="LaguTema"
+        component={LaguTema}
+        options={{headerTitle: 'Lagu Tema'}}
+      />
+      {/* Line 3 */}
+      <Stack.Screen
+        name="ThingsToBring"
+        component={ThingsToBring}
+        options={{headerTitle: 'Things To Bring'}}
+      />
+      <Stack.Screen
+        name="LaguBSMM"
+        component={LaguBSMM}
+        options={{headerTitle: 'Lagu BSMM'}}
+      />
+      <Stack.Screen
+        name="IkrarBSMM"
+        component={IkrarBSMM}
+        options={{headerTitle: 'Ikrar BSMM'}}
+      />
+      <Stack.Screen
+        name="FirstAidSkill"
+        component={FirstAidSkill}
+        options={{headerTitle: 'Basic First Aid Skill'}}
+      />
+      {/* Line 4 */}
+      <Stack.Screen name="Kuartermaster" component={Kuartermaster} />
+      <Stack.Screen name="KKK" component={KKK} />
     </Stack.Navigator>
   );
 };

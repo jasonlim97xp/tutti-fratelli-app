@@ -9,7 +9,7 @@ import {
 import {Div, Text, Image} from 'react-native-magnus';
 import YoutubePlayer from 'react-native-youtube-iframe';
 
-const LaguTema = ({navigation}) => {
+const LaguBSMM = ({navigation}) => {
   const [playing, setPlaying] = useState(false);
 
   const onStateChange = useCallback(state => {
@@ -24,28 +24,20 @@ const LaguTema = ({navigation}) => {
   }, []);
 
   const lyrics = [
-    'Di malam sepi,',
-    'Risaunya hati,',
-    'Saudara tak bererti lagi...',
+    'Bulan Sabit Merah Di Malaysia',
+    'Giat Berjasa Untuk Negara',
+    'Tidak Kira Kaum Dan Agama',
+    'Waktu Aman Atau Bahaya',
     '',
-    'Tenangkan fikiran,',
-    'Hulurkan tanganmu,',
-    'Kan tercapai dunia damai',
-    'Milikmu, milikku...',
+    'Di Mana Jua Adanya Sengsara',
+    'Di Sana Ada Kita',
+    'Di Darat Dan Laut Kita Bersedia',
+    'Walupun Diancam Bahaya',
     '',
-    'Kerana kedamaian,',
-    'Hasil jiwa murni,',
-    'Rela tabah hati,',
-    'Sedia Memaafkan...',
-    '',
-    'Kau dan aku,',
-    'Kita Bersaudara...',
-    'Renungkanlah..',
-    'Biar kau dan aku,',
-    'Terangi dunia,',
-    'Mara ke hadapan,',
-    'Hulurkanlah...',
-    'Tangnmu untuk dunia damai',
+    'Bulan Sabit Merah Gerakan Sedunia',
+    'Mambantu Semua Yang Menderita',
+    'Badan Sukarela Berkhidmat',
+    'Dengan Tabah Dan Bersemangat......',
   ];
 
   return (
@@ -61,7 +53,7 @@ const LaguTema = ({navigation}) => {
           />
 
           <Text fontSize="2xl" style={styles.title}>
-            Lagu Tema
+            Lirik Lagu Bulan Sabit Merah Malaysia
           </Text>
         </Div>
 
@@ -71,9 +63,10 @@ const LaguTema = ({navigation}) => {
           <YoutubePlayer
             height={230}
             play={playing}
-            videoId={'pCyPJz0JEBI'}
+            videoId={'tcPr8R0VlZ4'}
             onChangeState={onStateChange}
           />
+
           {lyrics.map((text, index) => (
             <Text key={index} fontSize="2xl" style={styles.contentText}>
               {text}
@@ -119,4 +112,4 @@ const styles = StyleSheet.create({
   contentText: {color: '#fefefe'},
 });
 
-export default LaguTema;
+export default LaguBSMM;
