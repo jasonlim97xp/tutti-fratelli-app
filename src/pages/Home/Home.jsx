@@ -54,15 +54,15 @@ const ENTRIES2 = [
     id: 2,
     line: 2,
     title: 'Taklimat 2 Preparation',
-    page: 'TeamStructure',
+    page: 'Taklimat2',
     illustration: require('../../assets/home_pic/taklimat2.jpg'),
   },
   {
     id: 3,
     line: 2,
-    title: 'Lagu Tema',
-    page: 'LaguTema',
-    illustration: require('../../assets/home_pic/lagu_tema.jpg'),
+    title: 'Anak Angkat Skuad',
+    page: 'AnakAngkat',
+    illustration: require('../../assets/home_pic/anak.jpeg'),
   },
   {
     id: 4,
@@ -91,10 +91,17 @@ const ENTRIES3 = [
   {
     id: 2,
     line: 3,
-    title: 'Disiplin',
-    page: 'TeamStructure',
-    illustration: require('../../assets/home_pic/disiplin.jpeg'),
+    title: 'Lagu Tema',
+    page: 'LaguTema',
+    illustration: require('../../assets/home_pic/lagu_tema.jpg'),
   },
+  // {
+  //   id: 2,
+  //   line: 3,
+  //   title: 'Disiplin',
+  //   page: 'TeamStructure',
+  //   illustration: require('../../assets/home_pic/disiplin.jpeg'),
+  // },
   {
     id: 3,
     line: 3,
@@ -123,14 +130,14 @@ const ENTRIES4 = [
     id: 2,
     line: 4,
     title: 'Penolong Ketua',
-    page: 'TeamStructure',
+    page: 'Penolong',
     illustration: require('../../assets/home_pic/penolong.jpeg'),
   },
   {
     id: 3,
     line: 4,
     title: 'Setiausaha',
-    page: 'RiderTutti',
+    page: 'Setiausaha',
     illustration: require('../../assets/home_pic/setiausaha.jpeg'),
   },
   {
@@ -167,31 +174,31 @@ const ENTRIES5 = [
   {
     id: 1,
     line: 5,
-    title: 'Sosial Relay',
-    page: 'SosialRelay',
+    title: 'First Aid Relay',
+    page: 'FirstAidRelay',
     illustration: require('../../assets/home_pic/thingstobring.jpeg'),
   },
   {
     id: 2,
-    line: 3,
-    title: 'Disiplin',
-    page: 'TeamStructure',
-    illustration: require('../../assets/home_pic/disiplin.jpeg'),
+    line: 5,
+    title: 'Sosial Relay',
+    page: 'SosialRelay',
+    illustration: require('../../assets/home_pic/thingstobring.jpeg'),
   },
-  {
-    id: 3,
-    line: 3,
-    title: 'Lagu BSMM',
-    page: 'LaguBSMM',
-    illustration: require('../../assets/home_pic/lagu_bsm.jpeg'),
-  },
-  {
-    id: 4,
-    line: 3,
-    title: 'Ikrar BSMM',
-    page: 'IkrarBSMM',
-    illustration: require('../../assets/home_pic/ikrar_bsm.jpeg'),
-  },
+  // {
+  //   id: 3,
+  //   line: 3,
+  //   title: 'Lagu BSMM',
+  //   page: 'LaguBSMM',
+  //   illustration: require('../../assets/home_pic/lagu_bsm.jpeg'),
+  // },
+  // {
+  //   id: 4,
+  //   line: 3,
+  //   title: 'Ikrar BSMM',
+  //   page: 'IkrarBSMM',
+  //   illustration: require('../../assets/home_pic/ikrar_bsm.jpeg'),
+  // },
 ];
 
 const {width: screenWidth} = Dimensions.get('window');
@@ -248,7 +255,6 @@ const Home = ({navigation}) => {
   };
 
   const renderMoreItem = ({item, line, index}) => {
-    console.log('Item', item);
     return (
       <TouchableOpacity onPress={() => navigateToPages(item.id, item.line)}>
         <View style={styles.multipleContainer}>
@@ -264,7 +270,7 @@ const Home = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScrollView
-        style={{backgroundColor: '#211134', minHeight: '100%', paddingTop: 20}}>
+        style={{backgroundColor: '#211134', minHeight: '100%', paddingTop: 30}}>
         <Div alignItems="center">
           <Image
             h={100}
@@ -274,8 +280,8 @@ const Home = ({navigation}) => {
             source={require('../../assets/ktf_logo.webp')}
           />
 
-          <Text fontSize="4xl" style={styles.title}>
-            Campers Guide
+          <Text fontSize="4xl" style={styles.title} textAlign="center">
+            Kem Tutti Fratelli Ke-25{'\n'}Campers Guide
           </Text>
         </Div>
         <Div style={{marginTop: 40}}>
@@ -332,7 +338,7 @@ const Home = ({navigation}) => {
           loop={true}
         />
 
-        <Div style={{marginVertical: 20, paddingHorizontal: '8%'}}>
+        {/* <Div style={{marginVertical: 20, paddingHorizontal: '8%'}}>
           <Text fontSize="4xl" style={styles.title}>
             Core Components
           </Text>
@@ -341,20 +347,6 @@ const Home = ({navigation}) => {
           sliderWidth={screenWidth}
           itemWidth={200}
           data={ENTRIES5}
-          renderItem={renderMoreItem}
-          firstItem={0}
-          loop={true}
-        />
-
-        {/* <Div style={{marginVertical: 20, paddingHorizontal: '8%'}}>
-          <Text fontSize="4xl" style={styles.title}>
-            Guide For Champions
-          </Text>
-        </Div>
-        <Carousel
-          sliderWidth={screenWidth}
-          itemWidth={200}
-          data={ENTRIES4}
           renderItem={renderMoreItem}
           firstItem={0}
           loop={true}

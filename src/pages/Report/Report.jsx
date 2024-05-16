@@ -47,7 +47,6 @@ const Report = ({navigation}) => {
     const daySelections = [];
 
     for (let i = 1; i <= iterations; i++) {
-      console.log('I', i, iterations);
       daySelections.push(
         <DaySelection key={i} i={i} triggerPress={() => ({})} />,
       );

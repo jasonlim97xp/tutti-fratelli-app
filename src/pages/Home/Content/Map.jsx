@@ -28,12 +28,12 @@ const Map = ({navigation}) => {
           </Text>
         </Div>
 
-        <Div style={{height: 20}} />
+        <Div style={{height: 40}} />
 
         <Image
-          minH={300}
-          minW={400}
-          maxW={screenWidth}
+          minH={screenWidth - 40}
+          minW={screenWidth - 40}
+          maxW={screenWidth - 40}
           source={require('../../../assets/content/map.jpg')}
         />
 

@@ -4,8 +4,9 @@ import {Div, Text, Image} from 'react-native-magnus';
 
 const IkrarBSMM = ({navigation}) => {
   const ikrar = [
-    'Bahawa kami, ahli Persatuan Bulan Sabit Merah Malaysia',
-    'berikrar akan taat setia kepada',
+    'Bahawa kami,',
+    'Ahli Persatuan Bulan Sabit Merah Malaysia,',
+    'berikrar, akan taat setia kepada',
     'Duli Yang Maha Mulia Sri Paduka Baginda',
     'Yang Di-Pertuan Agong',
     'serta pemerintah-pemerintah di negari kami',
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
   },
-  contentText: {color: '#fefefe'},
+  contentText: {color: '#fefefe', textAlign: 'center'},
 });
 
 export default IkrarBSMM;

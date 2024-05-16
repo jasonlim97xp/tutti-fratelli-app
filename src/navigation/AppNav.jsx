@@ -6,10 +6,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {ThemeProvider} from 'react-native-magnus';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from '../pages/Home/Home';
-import Score from '../pages/Score/Score';
 import Report from '../pages/Report/Report';
 import InputReport from '../pages/Report/InputReport';
-import Content from '../pages/Home/Content';
 import Committee from '../pages/Commitee/Committee';
 import History from '../pages/Home/Content/History';
 import TeamStructure from '../pages/Home/Content/TeamStructure';
@@ -29,6 +27,11 @@ import SosialRelay from '../pages/Home/Content/Competition/SosialRelay';
 import Ketua from '../pages/Home/Content/Roles/Ketua';
 import Kebudayaan from '../pages/Home/Content/Roles/Kebudayaan';
 import IT from '../pages/Home/Content/Roles/IT';
+import Penolong from '../pages/Home/Content/Roles/Penolong';
+import Setiausaha from '../pages/Home/Content/Roles/Setiausaha';
+import FirstAidRelay from '../pages/Home/Content/Competition/FirstAidRelay';
+import Taklimat2 from '../pages/Home/Content/Taklimat2';
+import AnakAngkat from '../pages/Home/Content/AnakAngkat';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -53,9 +56,19 @@ const HomeStack = () => {
       <Stack.Screen name="Safety" component={Safety} />
       {/* Line 2 */}
       <Stack.Screen
+        name="Taklimat2"
+        component={Taklimat2}
+        options={{headerTitle: 'Taklimat 2 Preparation'}}
+      />
+      <Stack.Screen
         name="TeamStructure"
         component={TeamStructure}
         options={{headerTitle: 'Struktur Skuad'}}
+      />
+      <Stack.Screen
+        name="AnakAngkat"
+        component={AnakAngkat}
+        options={{headerTitle: 'Anak Angkat Skuad'}}
       />
       {/* Taklimat 2 Preparation */}
       <Stack.Screen
@@ -92,8 +105,15 @@ const HomeStack = () => {
       />
       {/* Line 4 */}
       <Stack.Screen name="Ketua" component={Ketua} />
-      <Stack.Screen name="Kebudayaan" component={Kebudayaan} />
+      <Stack.Screen
+        name="Penolong"
+        component={Penolong}
+        options={{headerTitle: 'Penolong Ketua'}}
+      />
+      <Stack.Screen name="Setiausaha" component={Setiausaha} />
       <Stack.Screen name="Kuartermaster" component={Kuartermaster} />
+      <Stack.Screen name="Kebudayaan" component={Kebudayaan} />
+
       <Stack.Screen
         name="IT"
         component={IT}
@@ -102,6 +122,11 @@ const HomeStack = () => {
       <Stack.Screen name="KKK" component={KKK} />
 
       {/* Line 5 */}
+      <Stack.Screen
+        name="FirstAidRelay"
+        component={FirstAidRelay}
+        options={{headerTitle: 'First Aid Relay'}}
+      />
       <Stack.Screen
         name="SosialRelay"
         component={SosialRelay}
@@ -156,6 +181,10 @@ const AppNav = () => {
             },
             tabBarActiveTintColor: 'purple',
             tabBarInactiveTintColor: 'gray',
+            tabBarStyle: {
+              height: 70,
+              paddingBottom: 10, // Adjust the padding as per your requirement
+            },
           })}>
           <Tab.Screen name="Home" component={HomeStack} />
           <Tab.Screen name="Commitee" component={Committee} />

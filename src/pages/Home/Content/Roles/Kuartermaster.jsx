@@ -132,7 +132,7 @@ const Kuartermaster = ({navigation}) => {
 
         <Div style={styles.contentContainer}>
           <Text fontSize="xl" style={styles.contentHeader}>
-            Peranan
+            Peranan Kuartermaster
           </Text>
           {peranan.map((text, index) => (
             <Text key={index} fontSize="lg" style={styles.contentText}>

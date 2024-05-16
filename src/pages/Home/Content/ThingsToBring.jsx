@@ -74,7 +74,7 @@ const ThingsToBring = ({navigation}) => {
             Peralatan Kumpulan
           </Text>
           {peralatan_untuk_bawa.map((text, index) => (
-            <Text key={index} fontSize="lg" style={styles.contentText}>
+            <Text key={index} fontSize="lg" mb={10} style={styles.contentText}>
               {index + 1}. {text}
             </Text>
           ))}
@@ -84,7 +84,7 @@ const ThingsToBring = ({navigation}) => {
             Basic First Aid Box Medication List
           </Text>
           {first_aid_kid.map((text, index) => (
-            <Text key={index} fontSize="lg" style={styles.contentText}>
+            <Text key={index} fontSize="lg" mb={10} style={styles.contentText}>
               {index + 1}. {text}
             </Text>
           ))}
@@ -94,7 +94,7 @@ const ThingsToBring = ({navigation}) => {
             Peringatan
           </Text>
           {peringatan.map((text, index) => (
-            <Text key={index} fontSize="lg" style={styles.contentText}>
+            <Text key={index} fontSize="lg" mb={10} style={styles.contentText}>
               {index + 1}. {text}
             </Text>
           ))}

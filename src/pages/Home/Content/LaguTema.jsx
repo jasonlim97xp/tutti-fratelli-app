@@ -74,6 +74,7 @@ const LaguTema = ({navigation}) => {
             videoId={'pCyPJz0JEBI'}
             onChangeState={onStateChange}
           />
+          <Div style={{height: 20}} />
           {lyrics.map((text, index) => (
             <Text key={index} fontSize="2xl" style={styles.contentText}>
               {text}
@@ -116,7 +117,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
   },
-  contentText: {color: '#fefefe'},
+  contentText: {color: '#fefefe', textAlign: 'center'},
 });
 
 export default LaguTema;
