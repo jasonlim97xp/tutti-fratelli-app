@@ -44,7 +44,7 @@ const Kuartermaster = ({navigation}) => {
       amount: '1 unit',
     },
     {
-      item: 'Kayu Api (Jangan gunakan kayu bakau)',
+      item: 'Kayu Api \n(Jangan gunakan kayu bakau)',
       amount: 'Secukupnya',
     },
     {
@@ -64,15 +64,19 @@ const Kuartermaster = ({navigation}) => {
       amount: '2 unit',
     },
     {
-      item: 'Cerek Air',
-      amount: '1 unit',
+      item: 'Cawan, pinggan, sudu, garpu',
+      amount: 'Secukupnya',
+    },
+    {
+      item: '⁠Jug Air',
+      amount: '2 unit',
     },
     {
       item: 'Sudip',
       amount: '2 unit',
     },
     {
-      item: 'Bekas Makanan (untuk mengambil makanan)',
+      item: `Bekas Makanan \n(untuk mengambil makanan)`,
       amount: '2 unit',
     },
     {
@@ -142,7 +146,11 @@ const Kuartermaster = ({navigation}) => {
             Senarai Peralatan Kuartermaster
           </Text>
           {peralatan_kuartermaster.map((item, index) => (
-            <Div key={index} flexDir="row" justifyContent="space-around">
+            <Div
+              key={index}
+              flexDir="row"
+              justifyContent="space-around"
+              style={{marginBottom: 8}}>
               <Text fontSize="lg" style={styles.contentText}>
                 {item.item}
               </Text>
