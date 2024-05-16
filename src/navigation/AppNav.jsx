@@ -25,6 +25,10 @@ import IkrarBSMM from '../pages/Home/Content/Ikrar';
 import FirstAidSkill from '../pages/Home/Content/FirstAidSkill';
 import ThingsToBring from '../pages/Home/Content/ThingsToBring';
 import KKK from '../pages/Home/Content/Roles/KKK';
+import SosialRelay from '../pages/Home/Content/Competition/SosialRelay';
+import Ketua from '../pages/Home/Content/Roles/Ketua';
+import Kebudayaan from '../pages/Home/Content/Roles/Kebudayaan';
+import IT from '../pages/Home/Content/Roles/IT';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -87,8 +91,22 @@ const HomeStack = () => {
         options={{headerTitle: 'Basic First Aid Skill'}}
       />
       {/* Line 4 */}
+      <Stack.Screen name="Ketua" component={Ketua} />
+      <Stack.Screen name="Kebudayaan" component={Kebudayaan} />
       <Stack.Screen name="Kuartermaster" component={Kuartermaster} />
+      <Stack.Screen
+        name="IT"
+        component={IT}
+        options={{headerTitle: 'IT & Sosial Media'}}
+      />
       <Stack.Screen name="KKK" component={KKK} />
+
+      {/* Line 5 */}
+      <Stack.Screen
+        name="SosialRelay"
+        component={SosialRelay}
+        options={{headerTitle: 'Sosial Relay'}}
+      />
     </Stack.Navigator>
   );
 };

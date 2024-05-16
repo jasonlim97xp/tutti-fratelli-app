@@ -2,52 +2,48 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, ScrollView, Platform} from 'react-native';
 import {Div, Text, Image} from 'react-native-magnus';
 
-const ThingsToBring = ({navigation}) => {
-  const peralatan_untuk_bawa = [
-    '3 buah 4 men tent / 2 buah 6 men tent (maksima 3 buah)',
-    'Storage Box (Plastik)',
-    '3 Pen Markah Berlainan Warna',
-    'Tali Rafia (1 gulung besar)',
-    'Sulfur untuk keselamatan kawasan khemah',
-    'Plastik Sampah (kebersihan)',
-    '1 Baldi (multi purpose)',
-    'Watercolor & brush',
-    'Surat Khabar Lama (pelapik)',
-    'Peralatan QM',
-    'Batu bata x 3 unit',
-    'Parang',
-    'Kitbox, Tali BSM & Kain Anduh (pertandingan hari terakhir)',
-    'Lampu Suluh',
-    'Baju PJ/ Baju Sukan/ Baju Jersi Seragam Kumpulan',
-    'Baju Superhero/ Kostum Watak',
-    'Baju Kebudayaan',
-    'Uniform BSMM Set B Lengkap',
+const SosialRelay = ({navigation}) => {
+  const tepukan = [
+    'Tepuk Bulan Sabit',
+    'Chapter Klang',
+    'Red Crescent',
+    'Tepuk Semangat',
+    'Tepuk Nyamuk',
+    'Korewa Omigoto',
+    'Tepuk Doraemon',
+    'Tepuk Wow Hebat',
+    'Tepuk Terima Kasih',
+    'Tepuk Fuyoh',
   ];
 
-  const first_aid_kid = [
-    'Calamine Cream',
-    'ORS',
-    'Hydrogen Peroxide',
-    'Micropore Tape',
-    'Sterile Glove',
-    'Eye Ointment',
-    'Cotton Swab',
-    'Roller Bandage',
-    'Cold Spray',
-    'Prep Gauze',
-    'Face Mask',
-    'Plastic Forceps',
-    'Scissors',
-    'Vaseline',
-    'Plasters',
+  const sorakan = [
+    'Tutti Let’s Go',
+    'Siapa Bising di Sana',
+    'Boo Sama Dia',
+    'Tarik Nafas',
+    'Perhatian…. Yo!',
+    'Tutti Dynamite',
   ];
 
-  const peringatan = [
-    'Semua peralatan pasukan harus diletakkan di dalam storage box dan dilabelkan dengan nama kumpulan.',
-    'Hantarkan storage box kumpulan anda ke HQ pada 29 Mei 2024',
-    'Semua peralatan lain harus dibawa pada Hari Pertama kem',
-    'Semua peralatan skuad adalah di bawah tanggungjawab skuad',
-    'Pastikan semua peralatan skuad dibawa balik sebaik sahaja tamat perkhemahan',
+  const tarian = [
+    'Kangaroo Dance',
+    'Elephant Dance',
+    'Billy Manja',
+    'Walk All Night',
+    'Chicken Dance',
+  ];
+
+  const song = [
+    'The more we get together',
+    'Coconut',
+    'Hello Song',
+    'Di Sini Kita Berkumpul',
+    'Zulu Song',
+    'Oyako Damburi',
+    'Everywhere we go',
+    'Sampale Sampalowa',
+    'Aika Simba',
+    'Apo Eh Tai Tai',
   ];
 
   return (
@@ -59,11 +55,11 @@ const ThingsToBring = ({navigation}) => {
             w={100}
             m={10}
             rounded="circle"
-            source={require('../../../assets/ktf_logo.webp')}
+            source={require('../../../../assets/ktf_logo.webp')}
           />
 
           <Text fontSize="2xl" style={styles.title}>
-            Senarai Peralatan
+            Sosial Relay
           </Text>
         </Div>
 
@@ -71,9 +67,9 @@ const ThingsToBring = ({navigation}) => {
 
         <Div style={styles.contentContainer}>
           <Text fontSize="xl" style={styles.contentHeader}>
-            Peralatan Kumpulan
+            Tepukan Sosial
           </Text>
-          {peralatan_untuk_bawa.map((text, index) => (
+          {tepukan.map((text, index) => (
             <Text key={index} fontSize="lg" style={styles.contentText}>
               {index + 1}. {text}
             </Text>
@@ -81,9 +77,9 @@ const ThingsToBring = ({navigation}) => {
 
           <Div style={{height: 30}} />
           <Text fontSize="xl" style={styles.contentHeader}>
-            Basic First Aid Box Medication List
+            Sorakan Sosial
           </Text>
-          {first_aid_kid.map((text, index) => (
+          {tepukan.map((text, index) => (
             <Text key={index} fontSize="lg" style={styles.contentText}>
               {index + 1}. {text}
             </Text>
@@ -91,9 +87,19 @@ const ThingsToBring = ({navigation}) => {
 
           <Div style={{height: 30}} />
           <Text fontSize="xl" style={styles.contentHeader}>
-            Peringatan
+            Tarian Sosial
           </Text>
-          {peringatan.map((text, index) => (
+          {tepukan.map((text, index) => (
+            <Text key={index} fontSize="lg" style={styles.contentText}>
+              {index + 1}. {text}
+            </Text>
+          ))}
+
+          <Div style={{height: 30}} />
+          <Text fontSize="xl" style={styles.contentHeader}>
+            Nyanyian Sosial
+          </Text>
+          {tepukan.map((text, index) => (
             <Text key={index} fontSize="lg" style={styles.contentText}>
               {index + 1}. {text}
             </Text>
@@ -144,4 +150,4 @@ const styles = StyleSheet.create({
   contentText: {color: '#fefefe'},
 });
 
-export default ThingsToBring;
+export default SosialRelay;

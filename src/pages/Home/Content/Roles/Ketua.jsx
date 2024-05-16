@@ -2,21 +2,20 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, ScrollView, Platform} from 'react-native';
 import {Div, Text, Image} from 'react-native-magnus';
 
-const KKK = ({navigation}) => {
-  const lyrics = [
-    'Ahli KKK anda perlu menjaga keselamatan ahli skuad anda sepanjang kem.',
-    'Sekiranya ada sebarang isu-isu kesihatan ahli anda, sila melaporkan isu itu kepada Tutti Medical Centre dengan segera.',
-    'Menyediakan jadual tugas `Tutti Night Guard`.',
+const Ketua = ({navigation}) => {
+  const peranan = [
+    'Mengetuai pasukan anda (motivational talk…)',
+    'Menetapkan tarikh dan mesyuarat pasukan',
+    'Memastikan setiap peserta berkenalan antara satu sama lain.',
+    'Memastikan semua informasi penting disampaikan kepada semua peserta.',
+    'Memastikan checklist pasukan sentiasa diikuti.',
+    'Memaklumkan Coach sekiranya mengadakan mesyuarat pasukan.',
   ];
 
-  const tugasMalam = [
-    'Template jadual tugas malam akan diedarkan melalui group Whatsapp KKK.',
-    'Setiap shift harus ada 2 ahli bertugas daripada setiap skuad.',
-    'Setiausaha skuad dikecualikan daripada bertugas malam.',
-    'Memastikan ahli skuad anda bertugas mengikuti jadual yang ditetapkan.',
-    'Pastikan ahli skuad yang bertugas membawa wisel, lampu suluh serta sentiasa memakai tag nama bersama mereka.',
-    'Setiap ahli yang bertugas harus melaporkan diri di Tutti Medical Centre 15 minit sebelum shift bermula.',
-    'Cetak, Laminate dan Hantarkan jadual tugas malam kepada AJK KKK pada Taklimat 2 Kem (25 Mei 2024).',
+  const pastikan = [
+    'Jangan bermarah-marahan dengan ahli kumpulan semasa perbincangan kumpulan.',
+    'No one-man show!! Delegasikan tugas.',
+    'Kongsi masalah kumpulan anda bersama Coach anda. Selesaikan bersama!',
   ];
 
   return (
@@ -32,17 +31,17 @@ const KKK = ({navigation}) => {
           />
 
           <Text fontSize="2xl" style={styles.title}>
-            KKK
+            Ketua
           </Text>
         </Div>
 
         <Div style={{height: 20}} />
 
         <Div style={styles.contentContainer}>
-          <Text fontSize="2xl" style={styles.title}>
-            Peranan KKK
+          <Text fontSize="xl" style={styles.contentHeader}>
+            Peranan Ketua
           </Text>
-          {lyrics.map((text, index) => (
+          {peranan.map((text, index) => (
             <Text key={index} fontSize="lg" style={styles.contentText}>
               {index + 1}. {text}
             </Text>
@@ -50,10 +49,10 @@ const KKK = ({navigation}) => {
 
           <Div style={{height: 20}} />
 
-          <Text fontSize="2xl" style={styles.title}>
-            Tutti Night Guard
+          <Text fontSize="xl" style={styles.contentHeader}>
+            Memastikan Anda…
           </Text>
-          {tugasMalam.map((text, index) => (
+          {pastikan.map((text, index) => (
             <Text key={index} fontSize="lg" style={styles.contentText}>
               {index + 1}. {text}
             </Text>
@@ -95,7 +94,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 20,
   },
+  contentHeader: {
+    color: '#fefefe',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
   contentText: {color: '#fefefe', marginBottom: 10},
 });
 
-export default KKK;
+export default Ketua;
