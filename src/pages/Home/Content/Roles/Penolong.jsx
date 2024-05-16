@@ -129,7 +129,7 @@ const Penolong = ({navigation}) => {
             resizeMethod="resize"
             resizeMode="contain"
             alignSelf="center"
-            source={require('../../../../assets/content/Pen3.jpg')}
+            source={require('../../../../assets/content/Pen0.jpg')}
           />
 
           <Div style={{height: 40}} />
