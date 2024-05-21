@@ -60,7 +60,7 @@ const Penolong = ({navigation}) => {
     'Terdapat 2 jenis Power Hour:',
     '1.    Berasaskan Kemahiran',
     '     - Skuad harus menunjukkan satu kemahiran yang diberikan oleh mana-mana Coach untuk mendapatkan TUTTI Bonus',
-    '1.    Free and Easy',
+    '2.    Free and Easy',
     '     - Skuad boleh buat apa sahaja yang Coach minta, seperti mengambil secawan air, atau memberikan urut atas bahu',
     '     - Selepas tamatkan tugas, dapatkan tandatangan dari AJK dan laporkan kepada Coach Perkhemahan untuk mendapatkan Tutti Bonus.',
   ];

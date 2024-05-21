@@ -69,17 +69,17 @@ const Safety = ({navigation}) => {
   );
 
   const dilarangContentObject = {
-    paragraph1: '1. *Merokok semasa perkhemahan.',
+    paragraph1: '1. Merokok semasa perkhemahan.',
     paragraph2:
       '2. Memakai barangan emas aksesori seperti cicin, anting-anting dan lain-lain.',
     paragraph3:
       '3. Memakai pakaian yang menjolok mata seperti seluar pendek, singlet, “baby T” dan lain-lain.',
     paragraph4:
-      '4. *Berdua-duaan (lelaki dan perempuan) di mana-mana tempat pada bila-bila masa.',
+      '4. Berdua-duaan (lelaki dan perempuan) di mana-mana tempat pada bila-bila masa.',
 
-    paragraph5: '5. *Bergaduh antara satu sama lain.',
+    paragraph5: '5. Bergaduh antara satu sama lain.',
     paragraph6: '6. Mengeluarkan kata-kata lucah.',
-    paragraph7: '7. *Berjudi semasa perkhemahan.',
+    paragraph7: '7. Berjudi semasa perkhemahan.',
     paragraph8:
       '8. Membawa peralatan merbahaya ke dalam kawasan perkhemahan kecuali mendapat kebenaran.',
     paragraph9:
